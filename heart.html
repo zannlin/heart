@@ -1,0 +1,99 @@
+<html>
+
+
+<style>
+
+	body{
+		background-color: black;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		}
+		
+		.love{
+			position: relative;
+			width: 50px;
+			height: 50px;
+		}
+		
+		p::after{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			content: 'I love';
+			color: #000000;
+			font-size: 8px;
+			font-weight: bolder;
+			top: 10px;
+			left: 1px;
+			transition: all .5s ease-in-out;
+		}
+		
+		.love span{
+			position: absolute;
+			Width: 30px;
+			Height: 30px;
+			background-color: #00dd5f;
+			transition: all .5s ease-in-out;
+		}
+		
+		.love input{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			margin: 0;
+		}
+		
+		.love input:checked~span:nth-child(2){
+			background-color: #d40000;
+			border-radius: 50%;
+			left: 0;
+			z-index:1;
+			animation: effects .5s linear alternate; 
+		}
+		
+		.love input:checked~span:nth-child(3){
+			background-color: #d40000;
+			border-radius: 50%;
+			left: 20px;
+			z-index:1;
+			animation: effects .5 linear alternate;
+		}
+		
+		.love input:checked~span:nth-child(4){
+			background-color: #d40000;
+			top: 10px;
+			left:10px;
+			transform: rotate(45deg);
+			animation: effects .5s linear;
+		}
+		
+		.love input:checked~p:after{
+			content: 'you';
+			letter-spacing: 3px;
+			color: #fff;
+			z-index: 1;
+			top: 15px;
+			left: 13px;
+		}
+
+
+
+</style>
+<body>
+
+
+		<div class="love">
+			<input type="checkbox">
+			<span></span>
+			<span></span>
+			<span></span>
+			<p></p>
+		</div>
+
+
+</body>
+
+
+</html>
